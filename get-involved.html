@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Involved | Musacope Foundation</title>
+  <link rel="icon" href="images/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="Musacope Foundation logo" />
+        <div class="nav-logo-text"><span class="brand">Musacope</span><span class="sub">FOUNDATION</span></div>
+      </a>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#donate" class="btn btn-primary">Donate</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <p class="breadcrumb">Home / Get Involved</p>
+      <h1>Get Involved</h1>
+      <p>There are many ways to change a life. Choose the one that speaks to you.</p>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Ways You Can Help</h2>
+      <p class="section-subtitle">Whether you have time, skills, or resources — every contribution creates ripples of change.</p>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon">💛</div><h3>Donate</h3>
+          <p>Your financial support fuels every program — from school fees for a child to a borehole for a village.</p>
+          <a href="#donate" class="btn btn-primary" style="margin-top:12px;">Give Now</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">🙋</div><h3>Volunteer</h3>
+          <p>Bring your skills, energy, and heart to our programs. Volunteers are the backbone of our work.</p>
+          <a href="#volunteer" class="btn btn-navy" style="margin-top:12px;">Sign Up</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">🤝</div><h3>Partner With Us</h3>
+          <p>Businesses, faith communities, and organizations — partner with us to create systemic change.</p>
+          <a href="contact.html" class="btn btn-navy" style="margin-top:12px;">Contact Us</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">📣</div><h3>Spread the Word</h3>
+          <p>Share our story with your network. Awareness is one of the most powerful tools for change.</p>
+          <a href="#" class="btn btn-navy" style="margin-top:12px;">Follow Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONATE with real payment options -->
+  <section class="section-alt" id="donate">
+    <div class="container">
+      <h2 class="section-title">Make a Donation</h2>
+      <p class="section-subtitle">Every gift, big or small, makes a real difference. Secure payment powered by Stripe, PayPal, and Flutterwave.</p>
+
+      <div class="form-box" style="max-width:760px; margin:0 auto;">
+
+        <h3 style="margin-bottom:14px;">1. Choose an amount (USD)</h3>
+        <div class="donate-options">
+          <div class="donate-option" data-amount="20">$20</div>
+          <div class="donate-option" data-amount="50">$50</div>
+          <div class="donate-option selected" data-amount="100">$100</div>
+          <div class="donate-option" data-amount="250">$250</div>
+          <div class="donate-option" data-amount="500">$500</div>
+        </div>
+
+        <div class="form-group">
+          <label for="customAmount">Or enter a custom amount</label>
+          <input type="number" id="customAmount" value="100" min="1" step="1" />
+        </div>
+
+        <h3 style="margin:24px 0 14px;">2. Your details</h3>
+        <div class="form-group">
+          <label for="donorName">Full Name</label>
+          <input type="text" id="donorName" placeholder="Your full name" required />
+        </div>
+        <div class="form-group">
+          <label for="donorEmail">Email <span style="color:var(--orange);">*</span></label>
+          <input type="email" id="donorEmail" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="donorPhone">Mobile Phone <span style="color:var(--gray); font-weight:400; font-size:0.85rem;">(required for Mobile Money)</span></label>
+          <input type="tel" id="donorPhone" placeholder="+256 700 000 000" />
+        </div>
+        <div class="form-group">
+          <label for="cause">Direct my gift to</label>
+          <select id="cause">
+            <option value="general">Where it's needed most</option>
+            <option value="education">Education</option>
+            <option value="healthcare">Healthcare</option>
+            <option value="shelter">Shelter & Housing</option>
+            <option value="livelihoods">Livelihoods</option>
+            <option value="wash">Water & Sanitation</option>
+          </select>
+        </div>
+
+        <h3 style="margin:24px 0 14px;">3. Choose payment method</h3>
+        <div class="payment-methods">
+          <div class="payment-method selected" data-method="stripe">
+            <span class="pm-icon">💳</span>
+            <span class="pm-label">Card / Stripe</span>
+          </div>
+          <div class="payment-method" data-method="paypal">
+            <span class="pm-icon">🅿️</span>
+            <span class="pm-label">PayPal</span>
+          </div>
+          <div class="payment-method" data-method="momo">
+            <span class="pm-icon">📱</span>
+            <span class="pm-label">Mobile Money</span>
+          </div>
+        </div>
+
+        <!-- Stripe panel -->
+        <div class="payment-panel active" id="panel-stripe">
+          <h4>Pay with Card (Stripe)</h4>
+          <p>You'll be redirected to Stripe's secure checkout page. Cards, Apple Pay, and Google Pay all accepted.</p>
+          <button id="payStripe" class="provider-btn provider-stripe">
+            <span>Continue to Stripe Checkout →</span>
+          </button>
+        </div>
+
+        <!-- PayPal panel -->
+        <div class="payment-panel" id="panel-paypal">
+          <h4>Pay with PayPal</h4>
+          <p>Pay with your PayPal balance, bank account, or credit/debit card via PayPal.</p>
+          <div id="paypal-buttons" style="margin-top:14px;"></div>
+        </div>
+
+        <!-- Mobile Money panel -->
+        <div class="payment-panel" id="panel-momo">
+          <h4>Pay with Mobile Money</h4>
+          <p>Supports <strong>MTN Mobile Money</strong> & <strong>Airtel Money</strong> (Uganda), M-Pesa (Kenya), plus mobile money across Ghana, Tanzania, Rwanda, and more via Flutterwave. You'll receive a prompt on your phone to approve the payment.</p>
+          <button id="payFlutterwave" class="provider-btn provider-flutterwave">
+            <span>📱 Pay with Mobile Money</span>
+          </button>
+        </div>
+
+        <div id="donationResult"></div>
+
+        <p class="form-note" style="text-align:center; margin-top:22px;">🔒 All payments are processed by secure, PCI-compliant providers. Musacope Foundation never sees your card or mobile money PIN.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOLUNTEER -->
+  <section id="volunteer">
+    <div class="container">
+      <h2 class="section-title">Become a Volunteer</h2>
+      <p class="section-subtitle">Give your time, talents, and heart. Fill out the form and we'll be in touch within 48 hours.</p>
+
+      <div class="form-box" style="max-width:720px; margin:0 auto;">
+        <form class="js-formsubmit" action="https://formsubmit.co/info@musacope.org" method="POST">
+          <!-- FormSubmit settings -->
+          <input type="hidden" name="_subject" value="New Volunteer Application - Musacope Foundation">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="text" name="_honey" style="display:none">
+
+          <div class="form-group"><label>Full Name</label><input type="text" name="name" placeholder="Your full name" required /></div>
+          <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="you@example.com" required /></div>
+          <div class="form-group"><label>Phone</label><input type="tel" name="phone" placeholder="+256 700 000 000" /></div>
+          <div class="form-group">
+            <label>Area of Interest</label>
+            <select name="area_of_interest">
+              <option>Education & Mentorship</option>
+              <option>Healthcare Outreach</option>
+              <option>Community Projects</option>
+              <option>Fundraising & Events</option>
+              <option>Communications & Social Media</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Tell us about yourself</label><textarea name="message" placeholder="What skills or experience would you bring? When are you available?"></textarea></div>
+          <button type="submit" class="btn btn-navy" style="width:100%;">Submit Application</button>
+          <div class="form-message"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo"><img src="images/logo.png" alt="Musacope Foundation" /><span class="brand">Musacope Foundation</span></div>
+          <p style="color:#c9d3e6;">Empowering communities, changing lives — one project, one family, one child at a time.</p>
+          <div class="socials"><a href="#">f</a><a href="#">𝕏</a><a href="#">ig</a><a href="#">in</a></div>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><ul>
+          <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li>
+          <li><a href="programs.html">Our Programs</a></li><li><a href="blog.html">Blog</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li><li><a href="contact.html">Contact</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Programs</h4><ul>
+          <li><a href="programs.html">Education</a></li><li><a href="programs.html">Healthcare</a></li>
+          <li><a href="programs.html">Housing</a></li><li><a href="programs.html">Livelihoods</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul>
+          <li>📍 Kampala, Uganda</li><li>📧 info@musacope.org</li><li>📞 +256 700 000 000</li>
+        </ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> Musacope Foundation. All Rights Reserved.
+      <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    </div>
+  </footer>
+
+  <!-- Payment provider scripts -->
+  <script src="config.js"></script>
+  <script>
+    // Dynamically load PayPal SDK using the client ID from config
+    (function() {
+      const cid = window.MUSACOPE_CONFIG && window.MUSACOPE_CONFIG.paypalClientId;
+      const cur = window.MUSACOPE_CONFIG && window.MUSACOPE_CONFIG.paypalCurrency || 'USD';
+      if (cid && !cid.includes('YOUR_PAYPAL')) {
+        const s = document.createElement('script');
+        s.src = `https://www.paypal.com/sdk/js?client-id=${encodeURIComponent(cid)}&currency=${cur}&intent=capture`;
+        s.setAttribute('data-namespace', 'paypal');
+        document.head.appendChild(s);
+      }
+    })();
+  </script>
+  <script src="https://checkout.flutterwave.com/v3.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
